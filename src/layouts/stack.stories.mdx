@@ -1,0 +1,44 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { useAppearance } from '../application';
+
+import { Columns } from './columns';
+import { Stack } from './stack';
+
+<Meta title="Layout/Stacks and Columns" component={Stack} />
+
+# Stacks and Columns
+
+Stacks allow to create vertical layouts based on CSS Flexbox.
+
+<Canvas>
+<Story name="stacks" args={{ }}>
+<Stack additionalProps={{ height: '500px' }}>
+    <Stack.Row additionalProps={{ backgroundColor: '#efefef' }}>Hello</Stack.Row>
+    <Stack.Row additionalProps={{ backgroundColor: '#fafafa' }}>World</Stack.Row>
+</Stack>
+</Story>
+</Canvas>
+
+Columns are similar to Stacks, just horizontal.
+
+<Canvas>
+<Story name="columns" args={{ }}>
+<Columns>
+    <Columns.Col size={{ width: "200px" }} additionalProps={{ backgroundColor: '#efefef' }}>Column 1</Columns.Col>
+    <Columns.Col additionalProps={{ backgroundColor: '#fafafa' }}>Column 2</Columns.Col>
+    <Columns.Col size={{ width: "300px" }} additionalProps={{ backgroundColor: '#efefef' }}>Column 3</Columns.Col>
+</Columns>
+</Story>
+</Canvas>
+
+## Stack Properties
+<ArgsTable of={ Stack } />
+
+## Stack.Row Properties
+<ArgsTable of={ Stack.Row } />
+
+## Columns Properties
+<ArgsTable of={ Columns } />
+
+## Columns.Col Properties 
+<ArgsTable of={ Columns.Col } />
