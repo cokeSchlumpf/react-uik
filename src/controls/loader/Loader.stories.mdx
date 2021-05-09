@@ -1,0 +1,24 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+
+import { useAppearance } from '../../application';
+import { Loader } from './index';
+
+<Meta title="Controls/Loader" component={Loader} />
+
+# Loader 
+
+Loader can be used to indicate that content is loaded. The loader component is a container which display its content transparent if loading is active.
+
+<Canvas>
+<Story name="default" args={{ }}>
+    <Loader loading={ true }>
+        <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+    </Loader>
+</Story>
+</Canvas>
+
+
+## Loader Properties
+<ArgsTable of={ Loader } />

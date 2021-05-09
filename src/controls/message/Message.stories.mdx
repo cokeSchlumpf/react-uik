@@ -1,0 +1,47 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+
+import { useAppearance } from '../../application';
+import { Content } from '../../layouts';
+import { Message } from './index';
+
+<Meta title="Controls/Message" component={Message} />
+
+# Message 
+
+<Canvas>
+<Story name="default" args={{ }}>
+    <Content>
+        <Message message="This is some message." />
+        <Message message="This is a success message." kind="success" />
+        <Message message="This is a warning message." kind="warning" />
+        <Message message="This is a danger message." kind="danger" />
+        <Message title="Info" message="This is some message." />
+        <Message title="Success" message="This is a success message." kind="success" />
+        <Message title="Warning" message="This is a warning message." kind="warning" />
+        <Message title="Issue" message="This is a danger message." kind="danger" />
+    </Content>
+</Story>
+</Canvas>
+
+Messages can have a close action:
+
+<Canvas>
+<Story name="close" args={{ }}>
+    <Content>
+        <Message message="This is some message." onClose={ () => console.log('close') } />
+    </Content>
+</Story>
+</Canvas>
+
+Messages can have additional actions:
+
+<Canvas>
+<Story name="actions" args={{ }}>
+    <Content>
+        <Message message="This is some message." onClose={ () => console.log('close') } actions={ [ { label: 'Update Settings', action: () => console.log('update') } ] } />
+    </Content>
+</Story>
+</Canvas>
+
+## Message Properties
+<ArgsTable of={ Message } />

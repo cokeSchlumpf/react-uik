@@ -1,5 +1,6 @@
 import Card from './card';
 import Columns from './columns';
+import Content from './content';
 import Container from './container';
 import Grid from './grid';
 import Stack from './stack';
@@ -9,6 +10,7 @@ export {
     Card,
     Columns,
     Container,
+    Content,
     Grid,
     Stack,
     Tiles
