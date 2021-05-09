@@ -1,0 +1,54 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+
+import { useAppearance } from '../../application';
+import { Button } from './index';
+
+<Meta title="Controls/Button" component={Button} />
+
+# Button
+
+React UIK exposes different button components: **Button** for displaying standard buttons, **IconButton** for buttons with icons and optional text and **ButtonToolbar** to compose multiple buttons.
+
+Buttons can have different styles: `default`, `outline` and `transparent`:
+
+<Canvas>
+<Story name="appearance" args={{ }}>
+    <Button.Toolbar>
+        <Button>Default Button</Button>
+        <Button appearance="outline">Outline Button</Button>
+        <Button appearance="transparent">Transparent Button</Button>
+    </Button.Toolbar>
+</Story>
+</Canvas>
+
+Buttons can be colored with theme colors:
+
+<Canvas>
+<Story name="color" args={{ }}>
+    <Button.Toolbar>
+        <Button buttonColor={ useAppearance().colors.success }>Success Default Button</Button>
+        <Button buttonColor={ useAppearance().colors.success } appearance="outline">Success Outline Button</Button>
+    </Button.Toolbar>
+</Story>
+</Canvas>
+
+Buttons with icons:
+
+<Canvas>
+<Story name="icons" args={{ }}>
+    <Button.Toolbar>
+        <Button.IconButton icon="search">Search</Button.IconButton>
+        <Button.IconButton icon="useralt" orientation="right" appearance="outline">User Profile</Button.IconButton>
+        <Button.IconButton icon="question" />
+    </Button.Toolbar>
+</Story>
+</Canvas>
+
+## Button Properties
+<ArgsTable of={ Button } />
+
+## IconButton Properties
+<ArgsTable of={ Button.IconButton } />
+
+## Button Toolbar Properties
+<ArgsTable of={ Button.Toolbar } />

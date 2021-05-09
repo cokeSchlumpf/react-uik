@@ -1,0 +1,20 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+
+import { useAppearance } from '../../application';
+import { Icon } from './index';
+
+<Meta title="Controls/Icon" component={Icon} />
+
+# Icon
+
+Icons are base components which can be used in inline text or other components.
+
+<Canvas>
+<Story name="default" args={{ }}>
+    <Icon.Palette />
+</Story>
+</Canvas>
+
+
+## Button Properties
+<ArgsTable of={ Icon } />
