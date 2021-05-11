@@ -36,5 +36,9 @@ export function useAppearance(): Appearance {
 export default Appearance;
 
 export {
-    Color
+    Borders,
+    Color,
+    Colors,
+    Spacing,
+    Typography
 }

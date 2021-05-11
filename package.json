@@ -18,6 +18,7 @@
     "@types/styled-components": "^5.1.9",
     "@types/ui-box": "^2.0.0",
     "evergreen-ui": "^6.0.0-44",
+    "immer": "^9.0.2",
     "lodash": "^4.17.21",
     "polished": "^4.1.1",
     "react": "^17.0.1",

@@ -1,0 +1,23 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+
+import { useAppearance } from '../../application';
+import { Content } from '../../layouts';
+import { Table } from './index';
+
+<Meta title="Controls/Table" component={Table} />
+
+# Table 
+
+Table can be used to indicate that content is loaded. The table component is a container which display its content transparent if loading is active.
+
+<Canvas>
+<Story name="default" args={{ }}>
+    <Content>
+        <Table.Sample />
+    </Content>
+</Story>
+</Canvas>
+
+
+## Table Properties
+<ArgsTable of={ Table } />

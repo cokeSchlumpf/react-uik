@@ -1,0 +1,64 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+
+import { useAppearance } from '../../application';
+import { Content } from '../../layouts';
+import Component from '../component';
+import { Tag } from './index';
+
+<Meta title="Controls/Tag" component={Tag} />
+
+# Tag
+
+Tags are simple data displays.
+
+<Canvas>
+<Story name="default" args={{ }}>
+    <Content>
+        <Tag.Tags>
+            <Tag>Some Value</Tag>
+            <Tag tagColor={ useAppearance().colors.success }>A green tag</Tag>
+        </Tag.Tags>
+    </Content>
+</Story>
+</Canvas>
+
+Tags may have labels.
+
+<Canvas>
+<Story name="labels" args={{ }}>
+    <Content>
+        <Tag.Tags>
+            <Tag><Tag.Label>Property</Tag.Label>Value</Tag>
+        </Tag.Tags>
+    </Content>
+</Story>
+</Canvas>
+
+Tags can be used as toggles.
+
+<Canvas>
+<Story name="toggles" args={{ }}>
+    <Content>
+        <Tag.Tags>
+            <Component initialState={ false }>
+                {
+                    ({ state, setState }) => <Tag.Toggle tagColor={ useAppearance().colors.success } active={ state } onSelect={ setState }>{ state ? <>I'm selected</> : <>Click me</> }</Tag.Toggle>
+                }
+            </Component>
+        </Tag.Tags>
+    </Content>
+</Story>
+</Canvas>
+
+
+## Tag Properties
+<ArgsTable of={ Tag } />
+
+## Label Properties
+<ArgsTable of={ Tag.Label } />
+
+## Toggle Properties
+<ArgsTable of={ Tag.Toggle } />
+
+## Tags Properties
+<ArgsTable of={ Tag.Tags } />

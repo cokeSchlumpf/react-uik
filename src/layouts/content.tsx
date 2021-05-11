@@ -1,4 +1,4 @@
-import React,  { useContext } from 'react';
+import React from 'react';
 import Box, { EnhancerProps } from 'ui-box'
 import styled from 'styled-components';
 
