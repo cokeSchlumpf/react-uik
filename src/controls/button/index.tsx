@@ -8,7 +8,7 @@ import { Appearance, useAppearance } from '../../application';
 import { Color } from '../../application/appearance';
 import Icon, { IconName } from '../icon'
 
-import ButtonToolbar from './ButtonToolbar';
+import Toolbar from './toolbar';
 
 /*
  * Button
@@ -129,5 +129,5 @@ export function IconButton({ icon, orientation, children, ...props}: IconButtonP
 };
 
 Button.IconButton = IconButton;
-Button.Toolbar = ButtonToolbar;
+Button.Toolbar = Toolbar;
 export default Button;
